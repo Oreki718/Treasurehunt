@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:orientation="vertical"
+    android:background="@color/Windose_blue">
+
+    <TextView
+        android:id = "@+id/name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textSize="24sp"
+        tools:text = "name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id = "@+id/x_distantce_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textSize="20sp"
+        android:text = "@string/x_distance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_textView"/>
+
+    <TextView
+        android:id = "@+id/x_distantce_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textSize="20sp"
+        tools:text = "0"
+        app:layout_constraintStart_toEndOf="@+id/x_distantce_title_textView"
+        app:layout_constraintTop_toBottomOf="@+id/name_textView"/>
+
+    <TextView
+        android:id="@+id/y_distantce_title_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textSize="20sp"
+        android:text = "@string/y_distance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/x_distantce_title_textView" />
+
+    <TextView
+        android:id = "@+id/y_distantce_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:textSize="20sp"
+        tools:text = "0"
+        app:layout_constraintStart_toEndOf="@+id/y_distantce_title_textView"
+        app:layout_constraintTop_toBottomOf="@+id/x_distantce_title_textView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

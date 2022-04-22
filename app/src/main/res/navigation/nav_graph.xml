@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
 
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.yhe64.treasurehunt.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_dataEntryFragment"
+            app:destination="@id/dataEntryFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dataEntryFragment"
+        android:name="com.yhe64.treasurehunt.ui.main.DataEntryDialog"
+        android:label="DataEntryFragment"/>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.yhe64.treasurehunt.ui.settings.SettingsFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 </navigation>

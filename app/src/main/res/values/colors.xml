@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="Windose_blue">#FFBED6F4</color>
+    <color name="Windose_pink">#FFFBE2F1</color>
+    <color name="Windose_purple">#FFB88FDA</color>
+    <color name="Windose_darkblue">#FF4B22CA</color>
+    <color name="Windose_font_color">#FF4B22CA</color>
 </resources>
