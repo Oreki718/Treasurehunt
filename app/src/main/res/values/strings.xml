@@ -6,7 +6,7 @@
     <string name="copyright">Copyright &#169; 2022, Yingfan He</string>
     <string name="version">1.0.0</string>
     <string name="builtTime">20220421</string>
-    <string name="introduction">This is the project 3, a treasure hunter simulator.</string>
+    <string name="introduction">This is a debug build.</string>
 
     <string name="x_distance">X distance:</string>
     <string name="y_distance">Y distance:</string>
@@ -18,6 +18,8 @@
 
     <string name="delmsg">Do you really want to delete %s?</string>
     <string name="addmsg">Successfully added: %s </string>
+    <string name="welcomeMsg">Welcome to the new treasure hunt app!</string>
+    <string name="welcome">Welcome</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="ok">OK</string>

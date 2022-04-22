@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_mainFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
     </fragment>
     <dialog
         android:id="@+id/dataEntryFragment"
@@ -27,9 +30,10 @@
         android:id="@+id/settingFragment"
         android:name="com.yhe64.treasurehunt.ui.settings.SettingsFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_settings" >
-        <action
-            android:id="@+id/action_settingFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.yhe64.treasurehunt.ui.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

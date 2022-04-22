@@ -7,4 +7,10 @@
         android:title = "@string/settings"
         app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/action_go_info"
+        android:title="@string/info"
+        app:showAsAction="never" />
+
+
 </menu>

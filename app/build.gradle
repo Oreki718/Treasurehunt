@@ -5,6 +5,9 @@ plugins {
     id 'kotlin-kapt'
 }
 
+int MILLIS_IN_MINUTE = 1000 * 60
+int minutesSinceEpoch = System.currentTimeMillis() / MILLIS_IN_MINUTE
+
 android {
     compileSdk 32
 
@@ -22,6 +25,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField("String", "BUILD_TIME", "\"${minutesSinceEpoch}\"")
+            resValue("string", "build_time", "${minutesSinceEpoch}")
         }
     }
     buildFeatures{
@@ -54,4 +61,7 @@ dependencies {
     kapt "androidx.room:room-compiler:2.4.2"
     implementation "androidx.room:room-runtime:2.4.2"
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'jp.wasabeef:picasso-transformations:2.4.0'
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+    implementation "androidx.preference:preference-ktx:1.2.0"
 }
