@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,8 +28,11 @@ class GameFragment: Fragment(){
     private var _binding: FragmentGameBinding? = null
     private val binding get() = _binding!!
 
-    private val x_pos: Int =0;
-    private val y_pos: Int=0;
+    private var xpos: Int = 5
+    private var ypos: Int = 5
+    private var score: Int =0
+    private var step:  Int =0
+    private var pointnum : Int = 0
 
     private val prefs: SharedPreferences by lazy {
         PreferenceManager.getDefaultSharedPreferences(requireContext())
@@ -42,10 +46,104 @@ class GameFragment: Fragment(){
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentGameBinding.inflate(inflater, container,false)
+        xpos = (0..10).random()
+        ypos = (0..10).random()
         binding.apply {
             pointsRecyclerview2.run{
                 layoutManager = LinearLayoutManager(context)
                 adapter = pointAdapter
+            }
+            backToMainBtn.setOnClickListener{
+                findNavController().navigate(GameFragmentDirections.actionGameFragmentToMainFragment())
+            }
+            startBtn.setOnClickListener{
+                //scoreValueTextView.text = pointAdapter.itemCount.toString()
+                for (point in pointAdapter.points){
+                    if (point.x_position == xpos &&
+                        point.y_position == ypos){
+                        score += point.score
+                        scoreValueTextView.text = score.toString()
+                        sharedViewModel.delete(point)
+                        pointnum--
+                    }else{
+                        point.x_distance = point.x_position - xpos
+                        point.y_distance = point.y_position - ypos
+                        sharedViewModel.update(point)
+                    }
+                }
+            }
+            forwardBtn.setOnClickListener{
+                scoreValueTextView.text = ypos.toString()
+                ypos = (ypos + 11) % 10
+                step++
+                stepValueTextView.text = step.toString()
+                for (point in pointAdapter.points){
+                    if (point.x_position == xpos &&
+                        point.y_position == ypos){
+                        score += point.score
+                        scoreValueTextView.text = score.toString()
+                        sharedViewModel.delete(point)
+                        pointnum--
+                    }else{
+                        point.x_distance = point.x_position - xpos
+                        point.y_distance = point.y_position - ypos
+                        sharedViewModel.update(point)
+                    }
+                }
+            }
+            backBtn.setOnClickListener{
+                ypos = (ypos + 9) % 10
+                step++
+                stepValueTextView.text = step.toString()
+                for (point in pointAdapter.points){
+                    if (point.x_position == xpos &&
+                        point.y_position == ypos){
+                        score += point.score
+                        scoreValueTextView.text = score.toString()
+                        sharedViewModel.delete(point)
+                        pointnum--
+                    }else{
+                        point.x_distance = point.x_position - xpos
+                        point.y_distance = point.y_position - ypos
+                        sharedViewModel.update(point)
+                    }
+                }
+            }
+            leftBtn.setOnClickListener{
+                xpos = (xpos + 9) % 10
+                step++
+                stepValueTextView.text = step.toString()
+                for (point in pointAdapter.points){
+                    if (point.x_position == xpos &&
+                        point.y_position == ypos){
+                        score += point.score
+                        scoreValueTextView.text = score.toString()
+                        sharedViewModel.delete(point)
+                        pointnum--
+                    }else{
+                        point.x_distance = point.x_position - xpos
+                        point.y_distance = point.y_position - ypos
+                        sharedViewModel.update(point)
+                    }
+                }
+            }
+            rightBtn.setOnClickListener{
+                xpos = (xpos + 11) % 10
+                step++
+                stepValueTextView.text = step.toString()
+                for (point in pointAdapter.points){
+                    if (point.x_position == xpos &&
+                        point.y_position == ypos){
+                        score += point.score
+                        scoreValueTextView.text = score.toString()
+                        sharedViewModel.delete(point)
+                        pointnum--
+                    }else{
+                        point.x_distance = point.x_position - xpos
+                        point.y_distance = point.y_position - ypos
+                        sharedViewModel.update(point)
+                    }
+                }
             }
         }
         return binding.root
@@ -82,8 +180,8 @@ class GameFragment: Fragment(){
             xDistanceTitleTextView.text = resources.getString(R.string.x_distance)
             yDistanceTitleTextView.text = resources.getString(R.string.y_distance)
             nameTextView.text = point.name
-            xDistantceTextView.text = point.x_position.toString()
-            yDistantceTextView.text = point.y_position.toString()
+            xDistantceTextView.text = point.x_distance.toString()
+            yDistantceTextView.text = point.y_distance.toString()
             scoreTextView.text = point.score.toString()
 
             val cardColor = when (prefs.getString(CARD_COLOR, "0")?.toInt()){

@@ -40,8 +40,8 @@ class DataEntryDialog : BottomSheetDialogFragment(), AdapterView.OnItemSelectedL
             buttonAdd.setOnClickListener{
                 with(point){
                     name = nameEditText.text.toString()
-                    x_position = Integer.parseInt( xPositionEditText.text.toString())
-                    y_position = Integer.parseInt( yPositionEditText.text.toString())
+                    x_position = (Integer.parseInt( xPositionEditText.text.toString()) % 10)
+                    y_position = (Integer.parseInt( yPositionEditText.text.toString()) % 10)
                     score = Integer.parseInt( scoreEditText.text.toString())
                 }
                 sharedViewModel.insert(point)

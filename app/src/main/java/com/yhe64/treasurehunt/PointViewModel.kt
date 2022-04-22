@@ -23,4 +23,8 @@ class PointViewModel(app:Application) : AndroidViewModel(app) {
         pointRepository.deletePoint(point)
     }
 
+    fun update(point: Point){
+        pointRepository.updatePoint(point)
+    }
+
 }

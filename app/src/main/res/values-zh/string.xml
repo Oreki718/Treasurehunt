@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">宝藏猎人</string>
+    <string name="settings">设置</string>
+    <string name="info">软件信息</string>
+
+    <string name="copyright">版权所有 &#169; 2022, 何英钒</string>
+    <string name="version">1.0.0</string>
+    <string name="builtTime">20220421</string>
+    <string name="introduction">用于调试</string>
+
+    <string name="x_distance">横轴距离:</string>
+    <string name="y_distance">纵轴距离:</string>
+    <string name="x_position">X 坐标:</string>
+    <string name="y_position">Y 坐标:</string>
+    <string name="score">Score:</string>
+
+    <string name="hint_name">地点名称…</string>
+    <string name="hint_x_position">X 坐标…(1 to 10)</string>
+    <string name="hint_y_position">Y 坐标…(1 to 10)</string>
+    <string name="hint_score">地点得分…(integer number)</string>
+
+    <string name="delmsg">你要删除%s吗?</string>
+    <string name="addmsg">添加成功: %s </string>
+    <string name="welcomeMsg">欢迎来到宝藏猎人小游戏！</string>
+    <string name="show_message">在程序启动时显示欢迎信息</string>
+    <string name="show_point_score">显示每个地点的得分</string>
+    <string name="card_color">卡片颜色</string>
+    <string name="welcome">欢迎！</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="ok">好的</string>
+    <string name="add">添加</string>
+    <string name="cancel">取消</string>
+    <string name="start">开始</string>
+    <string name="left">左移</string>
+    <string name="right">右移</string>
+    <string name="forward">前移</string>
+    <string name="back">后移</string>
+    <string name="back_to_main">回到首页</string>
+    <string name="steps">步数:</string>
+    <string name="defaultValue">0</string>
+
+    <string-array name="colors">
+        <item>蓝色</item>
+        <item>粉色</item>
+    </string-array>
+
+    <string-array name="color_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+</resources>
