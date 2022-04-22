@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key = "show_message_at_start"
+        android:title="@string/show_message"/>
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key = "show_point_score"
+        android:title="@string/show_point_score"/>
+
+    <ListPreference
+        android:summary="%s"
+        android:defaultValue="0"
+        android:entries="@array/colors"
+        android:entryValues="@array/color_values"
+        android:key="card_color"
+        android:title="@string/card_color"/>
+
+</PreferenceScreen>

@@ -7,11 +7,11 @@
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
     android:orientation="vertical"
-    android:id="@+id/recycler_constraint_view"
+    android:id="@+id/recycler_constraint_view_2"
     android:background="@color/Windose_blue">
 
     <TextView
-        android:id = "@+id/name_textView"
+        android:id = "@+id/name_textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
@@ -21,63 +21,63 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id = "@+id/x_distantce_title_textView"
+        android:id = "@+id/x_distantce_title_textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:textSize="20sp"
         android:text = "@string/x_position"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_textView"/>
+        app:layout_constraintTop_toBottomOf="@+id/name_textView_2"/>
 
     <TextView
-        android:id = "@+id/x_distantce_textView"
+        android:id = "@+id/x_distantce_textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:textSize="20sp"
         tools:text = "0"
-        app:layout_constraintStart_toEndOf="@+id/x_distantce_title_textView"
-        app:layout_constraintTop_toBottomOf="@+id/name_textView"/>
+        app:layout_constraintStart_toEndOf="@+id/x_distantce_title_textView_2"
+        app:layout_constraintTop_toBottomOf="@+id/name_textView_2"/>
 
     <TextView
-        android:id="@+id/y_distantce_title_textView"
+        android:id="@+id/y_distantce_title_textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:textSize="20sp"
         android:text = "@string/y_position"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/x_distantce_title_textView" />
+        app:layout_constraintTop_toBottomOf="@+id/x_distantce_title_textView_2" />
 
     <TextView
-        android:id = "@+id/y_distantce_textView"
+        android:id = "@+id/y_distantce_textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:textSize="20sp"
         tools:text = "0"
-        app:layout_constraintStart_toEndOf="@+id/y_distantce_title_textView"
-        app:layout_constraintTop_toBottomOf="@+id/x_distantce_title_textView"/>
+        app:layout_constraintStart_toEndOf="@+id/y_distantce_title_textView_2"
+        app:layout_constraintTop_toBottomOf="@+id/x_distantce_title_textView_2"/>
 
     <TextView
-        android:id="@+id/score_title_textView"
+        android:id="@+id/score_title_textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:textSize="20sp"
         android:text = "@string/score"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/y_distantce_title_textView" />
+        app:layout_constraintTop_toBottomOf="@+id/y_distantce_title_textView_2" />
 
     <TextView
-        android:id = "@+id/score_textView"
+        android:id = "@+id/score_textView_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         android:textSize="20sp"
         tools:text = "0"
-        app:layout_constraintStart_toEndOf="@+id/score_title_textView"
-        app:layout_constraintTop_toBottomOf="@+id/y_distantce_title_textView"/>
+        app:layout_constraintStart_toEndOf="@+id/score_title_textView_2"
+        app:layout_constraintTop_toBottomOf="@+id/y_distantce_title_textView_2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
